@@ -12,6 +12,7 @@ pipeline {
             steps {
                 sh '''
                     ls -la
+                    npm install -g npm@6
                     node --version
                     npm --version
                     npm ci
