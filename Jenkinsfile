@@ -46,17 +46,16 @@ pipeline {
                 }
             }
 
-            steps {
-                sh '''
-                    node --version
-                    npm --version
-                    npm install http-server
-                    # npm install serve
-                    node_modules/.bin/serve -s build &
-                    sleep 10
-                    npx playwright test
-                '''
-            }
+            ssteps {
+                 sh '''
+                     node --version
+                     npm --version
+                     npm install http-server
+                     node_modules/.bin/http-server ./build -p 8080 &
+                     sleep 10
+                     npx playwright test
+                 '''
+             }
         }
     }
 
