@@ -50,7 +50,7 @@ pipeline {
                 sh '''
                     node --version
                     npm --version
-                    npm install serve@13
+                    npm install --global serve
                     # npm install serve
                     node_modules/.bin/serve -s build &
                     sleep 10
