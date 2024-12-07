@@ -46,7 +46,7 @@ pipeline {
                 }
             }
 
-            ssteps {
+            steps {
                  sh '''
                      node --version
                      npm --version
